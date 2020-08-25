@@ -1,0 +1,556 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+header{
+    width: 100%;
+    height: 10vh;
+    margin: 0;
+    padding: 1.5rem 15%;
+    display: flex;
+    background: #f5733f;
+    justify-content: space-between;
+}
+.currency, .drop-line, .dropdown, .hamburger{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.logo{
+    font-size: 2rem;
+    margin-top: -0.7rem;
+    font-family: Square721 BT;
+    font-weight: bold;
+}
+.navbar{
+    font-family: Calibri;
+}
+.nav-item, .nav-links{
+    list-style: none;
+    display: flex;
+}
+.nav-item li, .nav-links li{
+    padding: 0 1rem;
+}
+.home{
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+.home .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    padding: 0 1rem;
+    display: none;
+}
+.opac{
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide1{
+    background: url(./images/slidershow5.jpg);
+}
+.slide2{
+    background: url(./images/slidershow2.jpg);
+}
+.slide3{
+    background: url(./images/slidershow6.jpg);
+}
+.home .slideActive{
+    display: flex;
+}
+.container{
+    max-width: 80%;
+    height: 100%;
+    margin: auto;
+}
+.home .container{
+    display: flex;
+}
+.home .caption{
+    width: 70%;
+    margin: auto 0;
+}
+.home .caption h1{
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fa7304;
+    margin: 0;
+    text-transform: capitalize;
+}
+.home .slide.slideActive .caption h1{
+    animation: captionWord 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.home .slide.slideActive .caption .sub-topic{
+    margin: 0;
+    color: #000;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+.home .caption p{
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: 300;
+}
+.home .slide.slideActive .caption .sub-topic{
+    animation: captionWord 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+.home .slide.slideActive .caption p{
+    animation: captionWord 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+}
+@keyframes captionWord {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+}
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+}
+}
+.home .caption a{
+    padding: 0.7rem 1rem;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    text-transform: capitalize;
+}
+.home .controls .prev,
+.home .controls .next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    margin-top: -2rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #f5733f;
+}
+.home .controls .prev {
+    left: 0;
+}
+.home .controls .next{
+    right: 0;
+}
+.home .controls .prev:hover,
+.home .controls .next:hover {
+    background-color: #000;
+}
+.home .indicators{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.home .indicators div{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 3px;
+    border-radius: 50%;
+    color: #fff;
+    background: #f5733f;
+}
+.home .indicators div.indicatorActive{
+    background: #000;
+}
+button:hover, a:hover {
+    text-transform: uppercase;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.feature{
+    padding: 2rem 10rem;
+}
+.feature-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.feature-panel{
+    width: 20rem;
+    height: 15rem;
+    font-family: Calibri;
+    color: #222;
+    
+}
+.catergory{
+    font-size: 1.5rem;
+}
+.feature-panel button{
+    background: transparent;
+    border: none;
+    color: #222;
+    font-weight: 600;
+    margin-top: 5.5rem;
+}
+.man{
+    background: url(./images/man.jpg);
+    padding: 4rem 2rem;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-transform: capitalize;
+}
+.kids{
+    background: url(./images/kid.jpg);
+    padding: 4rem 0 0 11rem;
+    text-transform: capitalize;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.woman{
+    background: url(./images/woman.jpg);
+    padding: 4rem 2rem;
+    color: #e4e1e1;
+    text-transform: capitalize;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.woman button{
+    color: #e4e1e1;
+}
+.brand-logo{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    color: #333333;
+    font-size: 1.6rem;
+}
+.rockstar{
+    color: #a7a1a1;
+    font-weight: 100;
+}
+.sedex{
+    color: #747070;
+    font-weight: bolder;
+}
+.fashion{
+    color: #000000;
+    font-weight: 500;
+    font-family: News706 BT;
+}
+.queen{
+    color: #747070;
+    font-weight: bolder;
+    font-family: Orbitron;
+    text-transform: uppercase;
+}
+.royal{
+    color: #747070;
+    font-weight: bolder;
+}
+.trending-product{
+    margin: 1rem 10rem;
+    padding-top: 5rem;
+    font-family: Calibri;
+}
+.trend-header{
+    text-align: center;
+}
+.trend-head, .blog-head{
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 1rem;
+
+}
+.trend-text, .blog-text{
+    color: #747070;
+    margin-bottom: 2rem;
+}
+.trend-menu{
+    margin: 0 23rem;
+    text-transform: uppercase;
+}
+.trend-menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.trend-menu li{
+    padding: 1rem;
+}
+.trend-menu ul .active{
+    color: #f5733f;
+    border-bottom: 1px solid #f5733f;
+}
+.trend-product{
+    display: flex;
+    margin: 2rem 0;
+    justify-content: space-between;
+}
+.tproduct-1 img{
+    width: 15rem;
+}
+.tp-rating i{
+    color: #f2b604;
+}
+.tp-rating i:last-child{
+    color: #d6d8c8;
+}
+.ads{
+    background: url(./images/ads.jpg);
+    margin: 0 10rem;
+    padding: 5rem;
+    height: 50vh;
+    font-family: Arial;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: #333;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ads-catergory{
+    margin-bottom: 1rem;
+}
+.ads p{
+    width: 30%;
+    font-size: 1rem;
+    margin-bottom: 6rem;
+}
+.ads-2{
+    background: url(./images/ads2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 3rem;
+}
+.ads button{
+    background: transparent;
+    border: none;
+    color: #f5733f;
+    font-weight: bold;
+}
+.ads-catergory-2{
+    margin-bottom: 8rem;
+}
+.load-more{
+    margin: 1rem 28rem;
+    padding: 0.5rem 1.3rem;
+    background: transparent;
+    text-transform: capitalize;
+}
+.blog-section{
+    margin: 0 10rem;
+    padding-top: 5rem;
+    font-family: arial;
+}
+.blog-header{
+    text-align: center;
+}
+.blog-overview{
+    display: flex;
+    height: 80vh;
+}
+.blog-1{
+    background: #f3f3f3;
+    margin: 1rem 1rem 1rem 0;
+    width: 50%;
+    padding: 2rem;
+}
+.blog-1 img{
+    width: 32vw;
+    margin-bottom: 1.5rem;
+}
+.blog-1 p{
+    font-size: 0.85rem;
+    color: #747070;
+    margin: 1.2rem 0;
+    line-height: 1.5rem;
+}
+.blog-1 button{
+    border: none;
+    background: transparent;
+    color: #991c06;
+    font-weight: bold;
+}
+.blog-side{
+    margin: 1rem 0 1rem 1rem;
+}
+.blog-2{
+    display: flex;
+    background: #f3f3f3;
+    margin-bottom: 1.5em;
+}
+.blog-2 img{
+    height: 9.9rem;
+}
+.blog-2 div{
+    margin: 2rem;
+}
+.blog-2 div p{
+    font-size: 0.85rem;
+    color: #747070;
+    margin-top: 0.5rem;
+    line-height: 1.4rem;
+}
+.blog-footer{
+    display: flex;
+    margin: 2rem 0;
+    padding: 0.5rem 0;
+    justify-content: space-between;
+}
+.blog-foot{
+    display: flex;
+}
+.blog-foot i{
+    margin: 0.7rem;
+    color: #d9814e;
+}
+.blog-foot div p{
+    color: #a7a1a1;
+    font-size: 0.9rem;
+    line-height: 2rem;
+}
+.blog-foot div h3{
+    font-size: 0.95rem;
+    color: #424141;
+}
+.footer-page{
+    padding: 4rem 10rem;
+    background: #f3f3f3;
+    font-family: Calibri;
+}
+.footer-section{
+    display: flex;
+    justify-content: space-between;
+}
+.foot-shopup{
+    width: 30%;
+}
+.foot-shopup h1{
+    font-size: 2rem;
+    font-family: Square721 BT;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.foot-shopup p{
+    color: #747070;
+    margin-bottom: 1.1rem;
+}
+.reach-us{
+    display: flex;
+}
+.reach-us i{
+    margin-right: 1rem;
+    color: #d9814e;
+}
+.reach-us p{
+    margin-bottom: 0;
+}
+.reach-us h2{
+    color: #747070;
+    margin-bottom: 1.5rem;
+}
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.social-media a i{
+    color: black;
+}
+.foot-quick-links h3, .customer-care h3, .subscribe h3{
+    margin: 1rem 0 1.2rem 0;
+    color: #424141;
+}
+.foot-quick-links ul, .customer-care ul{
+    list-style: none;
+    line-height: 1.5rem;
+}
+.foot-quick-links ul li a, .customer-care ul li a{
+    text-decoration: none;
+    color: #747070;
+}
+.subscribe p{
+    color: #747070;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+.subForm input[type=email]{
+    padding: 0.3rem;
+    border: 1px solid #d3d1d1;
+}
+.subForm input[type=button]{
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #d9814e;
+    background: #d9814e;
+    color: white;
+    margin-left: -1rem;
+}
+.main-footer{
+    display: flex;
+    color: #4e4a4a;
+    font-family: Calibri;
+    padding: 1rem 10rem;
+    justify-content: space-between;
+    background: #eceaea;
+}
+.payment-mode ul{
+    display: flex;
+    list-style: none;
+}
+.payment-mode ul li{
+    margin: 0 1rem;
+}
+.payment-mode ul li a i{
+    color: #000;
+}
+#topBtn{
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+    background: #d9814e;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+    /* width: 1rem; */
+}
+#topBtn:hover{
+    background: #7e7d7d;
+    color: #000;
+}
